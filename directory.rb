@@ -1,6 +1,5 @@
 # first we add the list of students
-students [
-"The students on my cohort of Makers Academy",
+students = [
 "James Kemp",
 "Nic Yeeles",
 "Roi Driscoll",
@@ -22,6 +21,9 @@ students [
 "Nicolai DTH",
 "Nadav Matalon",
 "Fitsum Teklehaimanot"]
+
+puts "the students from my cohot at makers:"
+puts "--------"
 
 students.each do |student|
 	puts student
