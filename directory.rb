@@ -22,7 +22,7 @@ puts "Nicolai DTH"
 puts "Nadav Matalon"
 puts "Fitsum Teklehaimanot"
 #finally, we print the total
-print "Overall, we have"
+print "Overall, we have "
 #it's important that print() doesn't add new line characters
 print 21
 puts " great students"
