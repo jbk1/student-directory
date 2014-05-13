@@ -1,3 +1,4 @@
+# first we add the list of students
 puts "The students on my cohort of Makers Academy"
 puts "James Kemp"
 puts "Nic Yeeles"
@@ -20,5 +21,8 @@ puts "Sasha Cooper"
 puts "Nicolai DTH"
 puts "Nadav Matalon"
 puts "Fitsum Teklehaimanot"
+#finally, we print the total
+print "Overall, we have"
+#it's important that print() doesn't add new line characters
 print 21
 puts " great students"
