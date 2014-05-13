@@ -28,14 +28,14 @@ puts "--------"
 end 
 
 def print(names)
-names.each do |name|
+	names.each do |name|
 	puts name
 	end
 end
 
 #finally, we print the total
 def print_footer(names)
-print "Overall, we have #{names.length} great students"
+puts "Overall, we have #{names.length} great students"
 end
 
 print_header
