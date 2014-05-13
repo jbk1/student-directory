@@ -25,6 +25,7 @@ students [
 
 students.each do |student|
 	puts student
+end
 
 #finally, we print the total
 print "Overall, we have #{students.length} great students"
