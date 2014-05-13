@@ -22,12 +22,22 @@ students = [
 "Nadav Matalon",
 "Fitsum Teklehaimanot"]
 
-puts "the students from my cohot at makers:"
+def print_header
+puts "the students from my cohort at makers:"
 puts "--------"
+end 
 
-students.each do |student|
-	puts student
+def print(names)
+names.each do |name|
+	puts name
+	end
 end
 
 #finally, we print the total
-print "Overall, we have #{students.length} great students"
+def print_footer(names)
+print "Overall, we have #{names.length} great students"
+end
+
+print_header
+print(students)
+print_footer(students)
