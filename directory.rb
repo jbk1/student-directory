@@ -20,3 +20,5 @@ puts "Sasha Cooper"
 puts "Nicolai DTH"
 puts "Nadav Matalon"
 puts "Fitsum Teklehaimanot"
+print 21
+puts " great students"
