@@ -23,8 +23,8 @@ puts "the students from my cohort at makers:"
 puts "--------"
 end 
 
-def print(names)
-	names.each do |student|
+def print(xyz)
+	xyz.each_with_index do |student|
 	puts "#{student[:name]} (#{student[:cohort]} cohort)"
 	end
 end
@@ -38,3 +38,7 @@ students = input_students
 print_header
 print(students)
 print_footer(students)
+
+# re making it do exactly the same but without puts
+# statement, print then /n?? I know it must be more complex
+# than this!!
