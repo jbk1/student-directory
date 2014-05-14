@@ -27,7 +27,7 @@ puts "the students from my cohort at makers:"
 puts "--------"
 end 
 
-def print(names)
+def james(names)
 	names.each do |name|
 	puts name
 	end
@@ -39,5 +39,5 @@ puts "Overall, we have #{names.length} great students"
 end
 
 print_header
-print(students)
+james(students)
 print_footer(students)
