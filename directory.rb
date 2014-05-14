@@ -1,35 +1,36 @@
 # first we add the list of students
 students = [
-"James Kemp",
-"Nic Yeeles",
-"Roi Driscoll",
-"James Whyte",
-"Margherita Serino",
-"Vaidas Mykolaitis",
-"Johann Bornman",
-"Kate Hamilton",
-"James Kemp",
-"Nic Yeeles",
-"Julie Walker",
-"Will Allen",
-"Julia Tan",
-"Federico Maffei",
-"Jamie Patel",
-"Faezrah Rizalman",
-"Josh Fail-Broon",
-"Sasha Cooper",
-"Nicolai DTH",
-"Nadav Matalon",
-"Fitsum Teklehaimanot"]
+["James Kemp", :may]
+["Nic Yeeles", :may]
+["Roi Driscoll", :may]
+["James Whyte", :may]
+["Margherita Serino", :may]
+["Vaidas Mykolaitis", :may]
+["Johann Bornman", :may]
+["Kate Hamilton", :may]
+["James Kemp", :may]
+["Nic Yeeles", :may]
+["Julie Walker", :may]
+["Will Allen", :may]
+["Julia Tan", :may]
+["Federico Maffei", :may]
+["Jamie Patel", :may]
+["Faezrah Rizalman", :may]
+["Josh Fail-Broon", :may]
+["Sasha Cooper", :may]
+["Nicolai DTH", :may]
+["Nadav Matalon", :may]
+["Fitsum Teklehaimanot", :may]
+]
 
 def print_header
 puts "the students from my cohort at makers:"
 puts "--------"
 end 
 
-def james(names)
-	names.each do |name|
-	puts name
+def print(names)
+	names.each do |student|
+	puts "#{student[0]} (#{student[1]} cohort)"
 	end
 end
 
@@ -39,5 +40,5 @@ puts "Overall, we have #{names.length} great students"
 end
 
 print_header
-james(students)
+print(students)
 print_footer(students)
