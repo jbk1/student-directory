@@ -7,19 +7,22 @@ def input_students
 	name = gets.chomp
 	#while the code is not empty repeat this code
 	while !name.empty? do
+		puts "Pls type their age:"
+		age = gets.chomp
 		# add the student hash to the array
-		students << {:name => name, :cohort => :november}
+		students << {:name => name, :age => age, :cohort => :november}
 		puts "Now we have #{students.length} students"
 		#get another name from the user
 		name = gets.chomp
 	end
 	# return the array of students
 	students
+	#print 'enter age question'
+
 end
 
-puts "please enter the studets age"
 
-def
+
 
 def print_header
 puts "the students from my cohort at makers:"
@@ -29,7 +32,7 @@ end
 def print(names)
 	counter = 0
 	while counter < names.length
-		puts "#{names[counter][:name]} (cohort: #{names[counter][:cohort]})"
+		puts "#{names[counter][:name]}".center(20) + "(cohort: #{names[counter][:cohort]})".center(20) + "(age: #{names[counter][:age]})".center(20)
 		counter += 1
 	end
 end
