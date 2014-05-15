@@ -1,3 +1,6 @@
+
+
+
 def input_students
 	puts "Please enter the name of the students"
 	puts "To finish just hit return twice"
@@ -9,8 +12,20 @@ def input_students
 	while !name.empty? do
 		puts "Pls type their age:"
 		age = gets.chomp
+		# re-asking the question if they leave it empty
+		while age.empty? do
+			puts "their age, please?:"
+			age = gets.chomp
+		end
+		puts "Pls type their cohort"
+		cohort = gets.chomp
+			# re-asking the question if they leave it empty
+		while cohort.empty? do
+			puts "their cohort, please?:"
+			cohort = gets.chomp
+		end
 		# add the student hash to the array
-		students << {:name => name, :age => age, :cohort => :november}
+		students << {:name => name, :age => age, :cohort => cohort}
 		puts "Now we have #{students.length} students"
 		#get another name from the user
 		name = gets.chomp
