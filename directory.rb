@@ -17,7 +17,6 @@ def input_students
 	students
 end
 
-
 def print_header
 puts "the students from my cohort at makers:"
 puts "--------"
@@ -36,7 +35,6 @@ def print_with_index(list_of_students)
 			puts "#{index +1}. #{student[:name]} (#{student[:cohort]} cohort)"
 	end
 end
-
 
 #finally, we print the total
 def print_footer(names)
