@@ -23,9 +23,11 @@ puts "the students from my cohort at makers:"
 puts "--------"
 end 
 
-def print(names)
-	names.each_with_index do |student, index|
-	puts "#{student[:name]} (#{student[:cohort]} cohort)"
+def print(list_of_students)
+	list_of_students.each_with_index do |student, index|
+	puts "#{index +1}. #{student[:name]} (#{student[:cohort]} cohort)"
+	else
+
 	end
 end
 
