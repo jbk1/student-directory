@@ -23,13 +23,20 @@ puts "the students from my cohort at makers:"
 puts "--------"
 end 
 
-def print(list_of_students)
+def print_if_less_12(list_of_students)
+	students_with_short_names = list_of_students.select do |student|
+		student[:name].length < 12
+	end
+	print_with_index(students_with_short_names)
+end
+
+
+def print_with_index(list_of_students)
 	list_of_students.each_with_index do |student, index|
-		if student[:name].start_with?("A")
 			puts "#{index +1}. #{student[:name]} (#{student[:cohort]} cohort)"
-		end
 	end
 end
+
 
 #finally, we print the total
 def print_footer(names)
@@ -38,7 +45,7 @@ end
 
 students = input_students
 print_header
-print(students)
+print_if_less_12(students)
 print_footer(students)
 
 # re making it do exactly the same but without puts
