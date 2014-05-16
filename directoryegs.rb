@@ -19,43 +19,31 @@ def ask_user_name
 	user_input = gets.chomp
 end
 
-
 def input_students
 	students = []
 	name = ask_user_name
 	while !name.empty? do
 		students << {:name => name, :age => get_user_age, :cohort => get_user_cohort}
-		# map {|item| block}
-		# puts 
 		puts "Now we have #{students.count} students"
-		#get another name from the user
 		name = ask_user_name
 	end
 	# return the array of students
 	students
-	#print 'enter age question'
 end
 
-
 def print_header
-puts "the students from my cohort at makers:"
-puts "--------"
+	puts "the students from my cohort at makers:"
+	puts "--------"
 end 
 
-# def print_cohort_order(students)
-# 	students.sort! do |x, y|
-# 		x[:cohort] <=> y[:cohort] 
-# 	end
-
  def print_cohort_order(students)
-	students.sort! do |x, y|
+
+		students.sort! do |x, y|
 		x[:cohort] <=> y[:cohort] 
 	end
 
-
 	print(students)
 end
-
 
 def print(students)
 	counter = 0
@@ -65,10 +53,11 @@ def print(students)
 	end
 end
 
-#finally, we print the total
 def print_footer(names)
-puts "Overall, we have #{names.length} great students"
+	puts "Overall, we have #{names.length} great students"
 end
+
+
 students = input_students
 print_header
 print_cohort_order(students)
