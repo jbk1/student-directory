@@ -1,3 +1,5 @@
+require 'debugger'
+
 def get_user_age
 	puts "Age, please: "
 	age = gets.chomp
@@ -23,6 +25,8 @@ def input_students
 	name = ask_user_name
 	while !name.empty? do
 		students << {:name => name, :age => get_user_age, :cohort => get_user_cohort}
+		# map {|item| block}
+		# puts 
 		puts "Now we have #{students.count} students"
 		#get another name from the user
 		name = ask_user_name
@@ -38,10 +42,25 @@ puts "the students from my cohort at makers:"
 puts "--------"
 end 
 
-def print(names)
+# def print_cohort_order(students)
+# 	students.sort! do |x, y|
+# 		x[:cohort] <=> y[:cohort] 
+# 	end
+
+ def print_cohort_order(students)
+	students.sort! do |x, y|
+		x[:cohort] <=> y[:cohort] 
+	end
+
+
+	print(students)
+end
+
+
+def print(students)
 	counter = 0
-	while counter < names.length
-		puts "#{names[counter][:name].center(20, "-")}  (age: #{names[counter][:age].center(20, "-")}) (cohort: #{names[counter][:cohort].center(20, "-")})"
+	while counter < students.length
+		puts "#{students[counter][:name].center(20, "-")}  (age: #{students[counter][:age].center(20, "-")}) (cohort: #{students[counter][:cohort].center(20, "-")})"
 		counter += 1
 	end
 end
@@ -50,8 +69,7 @@ end
 def print_footer(names)
 puts "Overall, we have #{names.length} great students"
 end
-
 students = input_students
 print_header
-print(students)
+print_cohort_order(students)
 print_footer(students)
